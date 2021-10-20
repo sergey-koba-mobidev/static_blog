@@ -1,0 +1,50 @@
+<aside class="b-sidebar">
+  <div class="b-blog-author">
+    <div class="b-blog-author__details">
+      <img  class="b-blog-author__photo" src="https://s.gravatar.com/avatar/b7e4c4440248d7e0229484b7de2dd96a?s=170" width="140" height="140" alt="<%= t.author.full_name %>">
+      <h2 class="b-blog-author__name">{{ .Site.Author.name }}</h2>
+      <div class="b-blog-author__profesion">
+        <p class="b-blog-author__paragraf">{{ .Site.Author.skills | safeHTML }}</p>
+      </div>
+      <ul class="b-social-list g-clearfix">
+        <li class="b-social-list__item">
+          <a class="b-social-list__link m-social-list__link_gh" href="https://github.com/sergey-koba-mobidev" target="_blank" rel="noopener noreferrer">
+            Fork me
+          </a>
+        </li>
+        <li class="b-social-list__item">
+          <a class="b-social-list__link m-social-list__link_in" href="https://www.linkedin.com/in/serhii-koba" target="_blank" rel="noopener noreferrer">
+            Linkedin
+          </a>
+        </li>
+        <li class="b-social-list__item">
+          <a class="b-social-list__link m-social-list__link_tw" href="https://twitter.com/KobaSerhii" target="_blank" rel="noopener noreferrer">
+            Twitter
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="b-blog-author__goal">
+      <p class="b-blog-author__description">{{ .Site.Author.about | safeHTML }}</p>
+    </div>
+  </div>
+  <!--<div class="b-blog-posts">
+    <h2 class="b-blog-posts__heading"><%= t.post.posts %></h2>
+    <div class="b-blog-posts__post">
+      <h3 class="b-blog-posts__title"><a href="#">Docker in Production using Rancher</a></h3>
+      <p class="b-blog-posts__date">30 dec 2016</p>
+    </div>
+    <div class="b-blog-posts__post">
+      <h3 class="b-blog-posts__title"><a href="#">Docker for Rails</a></h3>
+      <p class="b-blog-posts__date">30 dec 2016</p>
+    </div>
+  </div>-->
+  <div class="b-tags-container">
+    <h2 class="b-tags-container__title">Tags</h2>
+    <ul class="b-tags-list g-clearfix">
+      {{ range .Site.Taxonomies.tags }}
+      <li class="b-tags-list__item"><a class="b-tags-list__link" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</aside>

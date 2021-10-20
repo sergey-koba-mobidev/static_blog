@@ -1,0 +1,6 @@
+{{ define "main" }}
+<div class="b-search-result">
+  <div class="b-search-result__container g-container">{{ .Title }}</div>
+</div>
+{{ partial "posts.html" (dict "posts" .Pages.ByPublishDate.Reverse) }}
+{{ end }}

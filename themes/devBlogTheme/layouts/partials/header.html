@@ -1,0 +1,60 @@
+<header class="b-header j-header">
+  <div class="b-header__container g-container g-clearfix">
+    <div class="b-hamburger j-sidebar-toggle">
+      <div class="b-hamburger__item">&nbsp;</div>
+    </div>
+    <div class="b-header__logo g-clearfix">
+      <h1><a href="/">1devblog</a></h1>
+    </div>
+    <div class="b-header__links g-clearfix">
+      <a class="b-header__fork-me" href="https://github.com/sergey-koba-mobidev/static_blog" target="_blank" rel="noopener noreferrer">Fork me</a>
+      <!--<ul class="b-languages-list">
+        <li class="b-languages-list__item">
+          <a href="/" class="b-languages-list__link active">Eng</a>
+        </li>
+        <li class="b-languages-list__item">
+          <a href="/" class="b-languages-list__link">Ukr</a>
+        </li>-->
+      </ul>
+    </div>
+  </div>
+  <!--sidebar mobile-->
+  <div class="b-overlay j-overlay">&nbsp;</div>
+  <noindex>
+  <div class="b-blog-author m-blog-author_mob j-mob-sidebar">
+    <div class="b-blog-author__container m-blog-author__container_mob">
+      <div class="b-blog-author__details m-blog-author__details_mob">
+        <img  class="b-blog-author__photo m-blog-author__photo_mob" src="https://s.gravatar.com/avatar/b7e4c4440248d7e0229484b7de2dd96a?s=170" width="132" height="132" alt="<%= t.author.full_name %>">
+        <h2 class="b-blog-author__name m-blog-author__name_mob">{{ .Site.Author.name }}</h2>
+        <div class="b-blog-author__profesion">
+          <p class="b-blog-author__paragraf">{{ .Site.Author.skills | safeHTML }}</p>
+        </div>
+        <ul class="b-social-list m-social-list_mob g-clearfix">
+          <li class="b-social-list__item">
+            <a class="b-social-list__link m-social-list__link_gh" href="https://github.com/sergey-koba-mobidev" target="_blank" rel="noopener noreferrer">
+              Fork me
+            </a>
+          </li>
+          <li class="b-social-list__item">
+            <a class="b-social-list__link m-social-list__link_in" href="https://www.linkedin.com/in/serhii-koba" target="_blank" rel="noopener noreferrer">
+              Linkedin
+            </a>
+          </li>
+          <li class="b-social-list__item">
+            <a class="b-social-list__link m-social-list__link_tw" href="https://twitter.com/KobaSerhii" target="_blank" rel="noopener noreferrer">
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="b-blog-author__goal m-blog-author__goal_mob">
+        <p class="b-blog-author__description">{{ .Site.Author.about | safeHTML }}</p>
+      </div>
+      <div class="b-blog-author__fork-me">
+        <a class="b-blog-author__fork-me-link" href="https://github.com/sergey-koba-mobidev/blog" target="_blank" rel="noopener noreferrer">Fork me</a>
+      </div>
+    </div>
+  </div>
+  </noindex>
+  <!--sidebar mobile-->
+</header>

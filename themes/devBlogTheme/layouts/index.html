@@ -1,0 +1,3 @@
+{{ define "main" }}
+{{ partial "posts.html" (dict "posts" (where .Site.RegularPages "Section" "posts")) }}
+{{ end }}

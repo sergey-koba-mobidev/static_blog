@@ -1,3 +1,9 @@
 baseURL = 'https://1devblog.org/'
 languageCode = 'en-us'
 title = 'Ruby, Docker, Technologies | Serhii Koba | Developer Blog'
+theme = 'devBlogTheme'
+
+[author]
+name = 'Serhii Koba'
+skills = 'Web, mobile and&nbsp;IoT developer'
+about = "Web Team Lead at <a href=\"https://mobidev.biz/\" target=\"_blank\">MobiDev</a>, who likes learning new stuff non-stop. Main languages are: Ruby and Js. Doesn't hesitate playing with DevOps, mobile and IoT. We live until we learn something."

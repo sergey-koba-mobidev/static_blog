@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<div class="b-blog-list">
+  <article class="b-blog-list-item">
+    <h2 class="b-blog-list-item__title">{{ .Title }}</h2>
+    <p class="b-blog-list-item__date">{{ .PublishDate.Format $dateFormat }}</p>
+    <ul class="b-tags-list g-clearfix">
+      {{ range .Params.Tags }}
+      {{ $href := print (absURL "tags/") (urlize .) "/" }}
+      <li class="b-tags-list__item">
+        <a class="b-tags-list__link" href="{{ $href }}">{{ . }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    <div class="b-wiziwig">
+      {{ .Content }}
+    </div>
+
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = '{{ .Page.Permalink }}';
+            this.page.identifier = '{{ .Params.disqus_identifier }}';
+            this.language = "en-us";
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '//onedevblog-1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+
+        //hack for tables
+        $(function () {
+            $('.medium-editor-table').addClass('table table-bordered');
+        });
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </article>
+</div>
+{{ end }}
