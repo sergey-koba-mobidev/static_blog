@@ -282,14 +282,14 @@ a:hover {
     font-family: 'Conv_AvenirNextCyr-Medium', Arial, sans-serif;
     font-size: 16px;
     text-transform: uppercase;
-    color: #fff;
+    color: #fff !important;
     line-height: 50px;
     letter-spacing: 2px;
 }
 
 .b-btn-read:hover {
     opacity: .8;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .b-pagination-list__item {
